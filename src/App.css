@@ -1,0 +1,44 @@
+body {
+  font-size: 62.5%;
+  
+  font-size: 1rem;
+}
+
+main {
+  text-align: center;
+  vertical-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+}
+
+.flashcard-container {
+  margin-top: 3.2rem;
+}
+
+.flashcard {
+  margin: 0 auto;
+  max-width: 20rem;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.button:hover {background-color: whitesmoke; transform: scale(1.2);}
+.button:active {transform: scale(1);}
