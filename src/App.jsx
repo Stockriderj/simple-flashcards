@@ -8,8 +8,8 @@ import FlashcardActions from "./components/FlashcardActions";
 
 export default function App() {
   const [flashcards, setFlashcards] = useState([
-    { id: 1, question: "are you gay?", answer: "yes" },
-    { id: 2, question: "are you okay?", answer: "nah prolly not" },
+    { id: 1, question: "Instructions (click to flip)", answer: "Use the arrows at the top to navigate. The actions are listed below." },
+    { id: 2, question: "Try making some cards!", answer: "Go ahead, use the form at the bottom." },
   ]);
   const [curCard, setCurCard] = useState(0);
 
@@ -24,11 +24,15 @@ export default function App() {
     setFlashcards(flashcards.filter(flashcard => flashcard.id !== id));
   };
 
+  // HANDLERS
   const addCard = card => {
     if (!card.question || !card.answer) return;
     const addedCard = card;
+    const newCurCard = flashcards.length;
+
     addedCard.id = Math.round(Math.random() * 100000);
     setFlashcards([...flashcards, addedCard]);
+    setCurCard(newCurCard);
   };
 
   const switchCard = i => {

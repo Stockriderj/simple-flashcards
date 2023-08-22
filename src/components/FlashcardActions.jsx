@@ -8,9 +8,8 @@ export default function FlashcardActions({
 }) {
   return (
     <div>
-      <Button>Edit</Button>
-      <Button onClick={() => onDelete(flashcards[curCard].id)}>Delete</Button>
-      {flashcards[curCard].id}
+      <Button className="mx-2" >Edit</Button>
+      <Button className="mx-2" onClick={() => onDelete(flashcards[curCard].id)}>Delete</Button>
     </div>
   );
 }

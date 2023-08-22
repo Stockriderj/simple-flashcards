@@ -16,7 +16,7 @@ main {
 }
 
 .flashcard-container {
-  margin-top: 3.2rem;
+  margin: 3.2rem;
 }
 
 .flashcard {
@@ -31,6 +31,7 @@ main {
 }
 
 .button {
+  display: inline-block;
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -42,3 +43,8 @@ main {
 }
 .button:hover {background-color: whitesmoke; transform: scale(1.2);}
 .button:active {transform: scale(1);}
+
+/* HELPER CLASSES */
+.mx-2 {
+  margin: 0 0.6rem;
+}

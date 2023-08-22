@@ -1,7 +1,7 @@
-export default function Button({children, ...rest}) {
+export default function Button({ children, className, ...rest }) {
   return (
-    <button {...rest} className="button">
+    <button {...rest} className={`button ${className}`} >
       {children}
-    </button>
+    </button >
   );
 }
