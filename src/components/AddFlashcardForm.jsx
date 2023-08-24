@@ -1,14 +1,17 @@
 import { useState } from "react";
 import Button from "./Button";
+import useFlashcards from '../hooks/use-flashcards';
 
-export default function AddFlashcardForm({ onAdd }) {
+export default function AddFlashcardForm() {
+  const {addCard} = useFlashcards();
+  
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
   const handleAdd = e => {
     e.preventDefault();
 
-    onAdd({ question, answer });
+    addCard({ question, answer });
 
     setQuestion("");
     setAnswer("");
